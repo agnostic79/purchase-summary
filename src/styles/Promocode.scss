@@ -1,0 +1,42 @@
+@import './utils';
+
+.Promocode {
+  padding-top: 15px;
+  strong {
+    font-weight: 700;
+    font-size: 13px;
+  }
+  &__form {
+    input {
+      padding: 8px 5px; 
+      border: 1px solid $color-gray;
+
+      &:disabled {
+        background: #efefef;
+        border: 1px solid $color-lightgray;
+      }
+    }
+
+    button {
+      padding: 8px 20px;
+      border: 1px solid $color-black;
+      background: transparent;
+      color: $color-black;
+      border-radius: 100px;
+      cursor: pointer;
+
+      &:hover {
+        background: $color-black;
+        color: #fff;
+      }
+
+      &:disabled {
+        background: $color-lightgray;
+        border: 1px solid $color-lightgray;
+        color: #fff;
+      }
+    }
+    
+  }
+
+}

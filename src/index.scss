@@ -21,3 +21,17 @@ body {
   text-decoration: underline;
 }
 
+.mt1 {
+  margin-top: 1rem;
+}
+
+.mt2 {
+  margin-top: 2rem;
+}
+
+.form {
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+}

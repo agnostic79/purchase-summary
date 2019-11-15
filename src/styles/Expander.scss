@@ -1,0 +1,14 @@
+.Expander {
+  
+  &__header {
+    .text {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .icon {
+      font-size: 2rem;
+    }
+    
+    
+  }
+}

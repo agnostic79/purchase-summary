@@ -1,0 +1,36 @@
+@import './utils';
+
+.Item {
+  display: flex;
+  padding-top: 1rem;
+  justify-content: space-between;
+  &__left {
+    width: 35%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  &__right {
+    width: 60%;
+    font-size: 1.3rem;
+  }
+
+  &__row {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    font-weight: bold;
+    &--new {
+      color: $color-black;
+    }
+    &--old {
+      text-decoration: line-through;
+    }
+  }
+
+
+}

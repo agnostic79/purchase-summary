@@ -5,8 +5,8 @@
   background: #fff;
   box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
   border-radius: 5px;
-  min-height: 50rem;
-  padding: 1.5rem;
+  
+  padding: 2rem 1.5rem 3rem;
 
   &__row {
     display: flex;
@@ -23,6 +23,19 @@
     color: $color-black;
     &--accent {
       color: $color-accent;
+    }
+    
+  }
+
+  .Cart__total {
+    font-size: 2.4rem;
+    .Cart__row {
+      align-items: center;
+    }
+    .Cart__field {
+      color: $color-black;
+      font-weight: bold;
+      font-size: 2rem;
     }
   }
   
