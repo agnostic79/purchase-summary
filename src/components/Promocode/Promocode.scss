@@ -1,11 +1,18 @@
-@import './utils';
+@import '../../utils/utils';
 
 .Promocode {
-  padding-top: 15px;
-  strong {
-    font-weight: 700;
-    font-size: 13px;
+  padding-top: 15px; 
+  
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+      strong {
+      font-weight: 700;
+      font-size: 13px;
+    }
   }
+
   &__form {
     input {
       padding: 8px 5px; 
@@ -35,8 +42,7 @@
         border: 1px solid $color-lightgray;
         color: #fff;
       }
-    }
-    
+    }    
   }
-
+ 
 }

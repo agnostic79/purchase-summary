@@ -1,7 +1,7 @@
 import React from "react";
-import "../styles/Item.scss";
+import "./Item.scss";
 
-import { formatPrice } from "../utils";
+import { formatPrice } from "../../utils/utils";
 
 const Item = ({ item }) => {
   const newPrice = item.price + item.savings;

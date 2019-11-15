@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Expander.scss";
+import "./Expander.scss";
 
 const Expander = props => {
   const [toggle, setToggle] = useState(false);

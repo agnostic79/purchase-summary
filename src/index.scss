@@ -1,4 +1,4 @@
-@import './styles/utils';
+@import './utils/utils';
 
 html {
   font-size: 10px;
@@ -27,11 +27,4 @@ body {
 
 .mt2 {
   margin-top: 2rem;
-}
-
-.form {
-  &__row {
-    display: flex;
-    justify-content: space-between;
-  }
 }

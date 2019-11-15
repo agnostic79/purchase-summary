@@ -1,4 +1,4 @@
-@import './utils';
+@import '../../utils/utils';
 
 .Item {
   display: flex;
@@ -31,6 +31,4 @@
       text-decoration: line-through;
     }
   }
-
-
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import { checkDiscount } from "../actions";
-import "../styles/Promocode.scss";
+import { checkDiscount } from "../../actions";
+import "./Promocode.scss";
 
 const Promocode = ({ discount, checkDiscount }) => {
   const [promo, setPromo] = useState("");
@@ -13,11 +13,11 @@ const Promocode = ({ discount, checkDiscount }) => {
   };
   return (
     <div className="Promocode">
-      <form className="Promocode__form form" onSubmit={formSubmit}>
-        <div className="form__row">
+      <form className="Promocode__form" onSubmit={formSubmit}>
+        <div className="Promocode__row">
           <strong>Promo code:</strong>
         </div>
-        <div className="form__row">
+        <div className="Promocode__row">
           <input
             type="text"
             name="promo"
