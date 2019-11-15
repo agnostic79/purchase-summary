@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 import "../styles/Cart.scss";
 import Divider from "./Divider";
@@ -9,13 +10,20 @@ import Item from "./Item";
 import Promocode from "./Promocode";
 import { formatPrice } from "../utils";
 
-const Cart = props => {
+const Cart = ({ item, discount }) => {
+  const total =
+    item.price +
+    item.taxes +
+    item.savings -
+    discount.value * (item.price + item.taxes + item.savings);
   return (
     <div className="Cart">
       <div className="Cart__prices">
         <div className="Cart__row">
           <span className="Cart__field">Subtotal</span>
-          <span className="Cart__value">{formatPrice("$", 102.96)}</span>
+          <span className="Cart__value">
+            {formatPrice(item.currency, item.price)}
+          </span>
         </div>
         <div className="Cart__row">
           <span className="Cart__field underline">
@@ -24,7 +32,7 @@ const Cart = props => {
             </Tooltip>
           </span>
           <span className="Cart__value Cart__value--accent">
-            {formatPrice("$", -3.85)}
+            {formatPrice(item.currency, item.savings)}
           </span>
         </div>
         <div className="Cart__row">
@@ -33,14 +41,18 @@ const Cart = props => {
             <br />
             (Based on 99999)
           </span>
-          <span className="Cart__value">$8.92</span>
+          <span className="Cart__value">
+            {formatPrice(item.currency, item.taxes)}
+          </span>
         </div>
       </div>
       <Divider />
       <div className="Cart__total">
         <div className="Cart__row">
           <span className="Cart__field Cart__field--total">Est. total</span>
-          <span className="Cart__value Cart__value--total">$108.03</span>
+          <span className="Cart__value Cart__value--total">
+            {formatPrice(item.currency, total)}
+          </span>
         </div>
       </div>
       <Expander>
@@ -56,7 +68,7 @@ const Cart = props => {
               className="Expander__body"
               style={{ display: toggle ? "block" : "none" }}
             >
-              <Item />
+              <Item item={item} />
             </div>
           </div>
         )}
@@ -84,4 +96,9 @@ const Cart = props => {
   );
 };
 
-export default Cart;
+const mapStateToProps = state => ({
+  item: state.item,
+  discount: state.discount
+});
+
+export default connect(mapStateToProps)(Cart);

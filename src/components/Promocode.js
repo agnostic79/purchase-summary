@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { checkDiscount } from "../actions";
 import "../styles/Promocode.scss";
 
-const Promocode = props => {
+const Promocode = ({ discount, checkDiscount }) => {
   const [promo, setPromo] = useState("");
 
   const formSubmit = e => {
     e.preventDefault();
-    console.log(promo);
+    checkDiscount(promo);
     setPromo("");
   };
   return (
@@ -21,9 +23,9 @@ const Promocode = props => {
             name="promo"
             value={promo}
             onChange={e => setPromo(e.target.value)}
-            disabled
+            disabled={discount.disabled}
           />
-          <button type="submit" disabled>
+          <button type="submit" disabled={discount.disabled}>
             Apply
           </button>
         </div>
@@ -32,4 +34,12 @@ const Promocode = props => {
   );
 };
 
-export default Promocode;
+const mapStateToProps = state => ({
+  discount: state.discount
+});
+
+const mapDispatchToProps = {
+  checkDiscount
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Promocode);
