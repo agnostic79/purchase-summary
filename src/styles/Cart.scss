@@ -1,0 +1,29 @@
+@import './utils';
+
+.Cart {
+  width: 30rem;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .18);
+  border-radius: 5px;
+  min-height: 50rem;
+  padding: 1.5rem;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;   
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    
+  }
+
+  &__value {
+    font-weight: bold;
+    color: $color-black;
+    &--accent {
+      color: $color-accent;
+    }
+  }
+  
+}

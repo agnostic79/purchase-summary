@@ -1,0 +1,6 @@
+@import './styles/utils';
+
+.App {
+  height: 100vh;
+  @include flexCenter();
+}

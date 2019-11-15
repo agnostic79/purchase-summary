@@ -1,0 +1,23 @@
+@import './styles/utils';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: $body-font-size;
+  font-family: $font-family;
+  color: $color-text;
+  margin: 0;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
