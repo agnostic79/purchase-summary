@@ -11,6 +11,12 @@ You can find the full description of the project in Brief folder
 * Sass
 * No predefined components are used
 
+### Instructions to start the app
+* clone repo
+* cd purchase-summary
+* npm i
+* npm start
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
