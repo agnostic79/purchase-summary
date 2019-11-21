@@ -2,12 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 
 import "./Cart.scss";
-import Divider from "../Divider/Divider";
-import Tooltip from "../Tooltip/Tooltip";
+import Divider from "../Divider";
+import Tooltip from "../Tooltip";
 
-import Expander from "../Expander/Expander";
-import Item from "../Item/Item";
-import Promocode from "../Promocode/Promocode";
+import Expander from "../Expander";
+import Item from "../Item";
+import Promocode from "../Promocode";
 import { formatPrice } from "../../utils/utils";
 
 const Cart = ({ item, discount }) => {
